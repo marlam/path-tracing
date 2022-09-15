@@ -1,0 +1,100 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[american]{babel}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{sectsty}
+\usepackage[table,svgnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+
+\newcommand{\authortitle}{Priv.-Doz.~Dr.~Ing.}
+\newcommand{\authorname}{Martin Lambers}
+\newcommand{\course}{Rendering}
+\newcommand{\tutorial}{Tutorial 10}
+
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  citecolor = blue,
+  pdfauthor = {\authorname},
+  pdftitle = {\course{} \tutorial},
+  pdfsubject = {\course Tutorial},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.6in, 8.5in},
+  left=1.0in,
+  top=1.25in
+}
+
+% Custom section fonts
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\large}
+\subsubsectionfont{\rmfamily\mdseries\normalsize}
+\paragraphfont{\rmfamily\mdseries\itshape\normalsize}
+
+% Don't indent paragraphs; leave space instead
+\setlength\parindent{0em}
+\setlength\parskip{.5\baselineskip plus .5\baselineskip}
+
+% In-text code sample
+\newcommand{\code}[1]{\texttt{#1}}
+% Larger code examples with lstlisting
+\definecolor{cgblue}{rgb}{0.2,0.2,0.7}
+\lstloadlanguages{C}
+\lstdefinelanguage[OpenGL]{C}[ANSI]{C}{%
+    morekeywords={bool,bvec2,bvec3,bvec4,ivec2,ivec3,ivec4,vec2,vec3,vec4}
+}
+\lstset{%
+    language=[OpenGL]C,
+    basicstyle=\footnotesize\ttfamily,%
+    keywordstyle=\color{cgblue},%
+    directivestyle=\color{cgblue},%
+    identifierstyle=,%
+    commentstyle=\color{cgblue!50!white}\itshape,%
+    stringstyle=\color{cgblue!80!white},%
+    numbers=none,%
+    numberstyle=\tiny,%
+    extendedchars=true,%
+    showspaces=false,%
+    showstringspaces=false,%
+    showtabs=false,%
+    breaklines=false,%
+    frame=single,%
+    frameround=tttt,%
+    backgroundcolor=\color{white},%
+    literate={\\\%}{\%}1,
+    escapechar=\%
+}
+
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\LARGE
+
+\centerline{\course{} \tutorial}
+
+\vspace{1ex}
+
+\normalsize
+
+\centerline{\authortitle{} \authorname}
+
+%\vspace{.5\baselineskip}
+
+\section*{Assigment 1}
+
+Implement the Depth of Field effect.
+
+For this purpose, implement ray creation based on the thin lens model in
+\code{Camera::getRay()} as discussed in the lecture.
+
+The tutorial material includes the example scene from the lecture.
+
+\end{document}

@@ -1,0 +1,11 @@
+path-tracing.aux
+path-tracing.log
+path-tracing.nav
+path-tracing.out
+path-tracing.pdf
+path-tracing.snm
+path-tracing.toc
+path-tracing.vrb
+path-tracing.*.vrb
+path-tracing*.pdf
+.part*

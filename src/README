@@ -1,0 +1,15 @@
+01: initial version, first assignment
+02: + antialiasing, + animation
+03: + textures
+04: + mirror, + glass, + phong
+05: + triangles, + simple tone mapping
+06: + aabb bvh
+07: + frames/tiles parallelization
+08: + russian roulette, + stratified sampling
+09: + material importance sampling
+10: + light importance sampling
+11: + multiple importance sampling
+12: + texture types checker, transformer + envmap (equirect, cube)
+13: + alpha maps, + normal maps
+14: + noise textures
+15: + lens effects
